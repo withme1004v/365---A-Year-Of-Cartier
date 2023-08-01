@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+      }
+      div.visual {
+        position: relative;
+        width: 1920px;
+        height: 775px;
+        border: 1px solid #000;
+      }
+      div.visual > div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+      .top {
+        border: 1px solid #f00;
+        /* mix-blend-mode: multiply; */
+      }
+      .top p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 775px;
+      }
+      .top p:first-child {
+        background: url(haut-6.webp);
+      }
+      .top p:nth-child(2) {
+        background: url(haut-5.webp);
+      }
+      .top p:nth-child(3) {
+        background: url(haut-3.webp);
+      }
+      .top p:nth-child(4) {
+        background: url(haut-2.webp);
+      }
+      .top p:nth-child(5) {
+        background: url(haut-1.webp);
+        top: 100px;
+      }
+      .top p:nth-child(6) {
+        background: url(bas-2.webp);
+      }
+      .top p:nth-child(7) {
+        background: url(bas-3.webp);
+      }
+      .top p:nth-child(8) {
+        background: url(bas-1.webp);
+      }
+      span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+      span:first-of-type {
+        mix-blend-mode: multiply;
+        z-index: -1;
+      }
+      span:first-of-type img {
+        /* mix-blend-mode: screen; */
+        /* opacity: 0.5; */
+      }
+      span:last-of-type {
+        /* mix-blend-mode: multiply; */
+        z-index: 1;
+      }
+      span:last-of-type img {
+        mix-blend-mode: screen;
+        /* opacity: 0.5; */
+      }
+      .div.bottom {
+        position: absolute;
+
+        background: #ccc url(mask-top-2.png), url(mask-bottom-2.png);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="visual">
+      <div class="top">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <!-- <span> <img src="mask-top-2.png" alt="" /></span> -->
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- <span><img src="mask-bottom-2.png" alt="" /></span> -->
+      </div>
+
+      <div class="bottom"></div>
+    </div>
+  </body>
+</html>
